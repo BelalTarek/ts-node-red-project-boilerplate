@@ -1,7 +1,1 @@
-sample_project
-==============
-
-### About
-
-This is your project's README.md file. It helps users understand what your
-project does, how to use it and anything else they may need to know.
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/bishoymelek/node-red-sample-app.git)
