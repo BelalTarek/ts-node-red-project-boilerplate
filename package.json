@@ -3,7 +3,7 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "scripts": {
-        "start": "node node_modules/node-red/red.js --userDir . --settings ./config/dev_settings.js",
+        "start": "node node_modules/node-red/red.js --userDir . --settings ./config/settings.js",
         "dev": "nodemon node_modules/node-red/red.js --userDir .  --settings ./config/dev_settings.js"
     },
     "author": "Bishoy Melek",
