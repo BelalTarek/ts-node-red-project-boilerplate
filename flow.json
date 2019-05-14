@@ -18,11 +18,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 308,
-        "y": 262,
+        "x": 140,
+        "y": 260,
         "wires": [
             [
-                "fa50511b.1e395"
+                "2ae8cef8.2b6292"
             ]
         ]
     },
@@ -33,11 +33,42 @@
         "name": "",
         "active": true,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
-        "complete": "false",
-        "x": 623,
-        "y": 213,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 860,
+        "y": 260,
         "wires": []
+    },
+    {
+        "id": "5f820e4c.a5288",
+        "type": "lower-case",
+        "z": "d404091c.51afb8",
+        "name": "HEi",
+        "x": 451.5,
+        "y": 316,
+        "wires": [
+            [
+                "fa50511b.1e395"
+            ]
+        ],
+        "info": "Hi"
+    },
+    {
+        "id": "2ae8cef8.2b6292",
+        "type": "function",
+        "z": "d404091c.51afb8",
+        "name": "",
+        "func": "console.log(msg);\nmsg.payload = \"HEQ\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "5f820e4c.a5288"
+            ]
+        ]
     }
 ]
