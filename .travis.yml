@@ -11,10 +11,10 @@ cache: npm
 #   app: ts-node-red-project-bp
 jobs:
   include:
-    - stage: unit tests
-      script: skip
-    - stage: unit tests
-      script: skip
+    # - stage: unit tests
+    #   script: skip
+    # - stage: unit tests
+    #   script: skip
     - stage: deploy to staging
       script: skip
       deploy: &heroku
@@ -24,7 +24,7 @@ jobs:
     - stage: test staging
       script: 'curl https://ts-node-red-project-bp.herokuapp.com'
     - stage: deploy to production
-      script: skip
+      script: test.sh
       deploy:
         <<: *heroku
         app: ts-node-red-project-production

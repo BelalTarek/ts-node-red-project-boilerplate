@@ -7,6 +7,15 @@
         "info": ""
     },
     {
+        "id": "4bb600cc.b24f2",
+        "type": "mongodb-config",
+        "z": "",
+        "hostname": "ds147096.mlab.com",
+        "port": "47096",
+        "db": "rasidi-sample",
+        "name": "mlab"
+    },
+    {
         "id": "a3d82710.a07eb8",
         "type": "inject",
         "z": "d404091c.51afb8",
@@ -18,8 +27,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 140,
-        "y": 260,
+        "x": 144,
+        "y": 143,
         "wires": [
             [
                 "2ae8cef8.2b6292"
@@ -37,23 +46,9 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 860,
-        "y": 260,
+        "x": 913,
+        "y": 113,
         "wires": []
-    },
-    {
-        "id": "5f820e4c.a5288",
-        "type": "lower-case",
-        "z": "d404091c.51afb8",
-        "name": "HEi",
-        "x": 451.5,
-        "y": 316,
-        "wires": [
-            [
-                "fa50511b.1e395"
-            ]
-        ],
-        "info": "Hi"
     },
     {
         "id": "2ae8cef8.2b6292",
@@ -63,11 +58,38 @@
         "func": "console.log(msg);\nmsg.payload = \"HEQ\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 350,
-        "y": 160,
+        "x": 284,
+        "y": 174,
         "wires": [
             [
-                "5f820e4c.a5288"
+                "ede85c13.6d1c6"
+            ]
+        ]
+    },
+    {
+        "id": "ede85c13.6d1c6",
+        "type": "change",
+        "z": "d404091c.51afb8",
+        "name": "define env var",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "hey",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 531.5,
+        "y": 221,
+        "wires": [
+            [
+                "fa50511b.1e395"
             ]
         ]
     }
