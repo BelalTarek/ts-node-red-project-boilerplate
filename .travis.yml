@@ -2,10 +2,31 @@ language: node_js
 node_js:
 - '10'
 cache: npm
-script:
-- echo "skipping tests"
-deploy:
-  provider: heroku
-  api_key:
-    secure: 8cb875fc-caa5-4ee5-b0cd-6753c177a03a
-  app: ts-node-red-project-bp
+# script:
+# - echo "skipping tests"
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: 8cb875fc-caa5-4ee5-b0cd-6753c177a03a
+#   app: ts-node-red-project-bp
+jobs:
+  include:
+    - stage: unit tests
+      script: skip
+    - stage: unit tests
+      script: skip
+    - stage: deploy to staging
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: ts-node-red-project-bp
+        api_key: 8cb875fc-caa5-4ee5-b0cd-6753c177a03a
+    - stage: test staging
+      script: 'curl https://ts-node-red-project-bp.herokuapp.com'
+    - stage: deploy to production
+      script: skip
+      deploy:
+        <<: *heroku
+        app: ts-node-red-project-production
+    - stage: test production
+      script: 'curl https://ts-node-red-project-production.herokuapp.com'
