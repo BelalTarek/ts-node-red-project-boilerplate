@@ -10,8 +10,7 @@
     "license": "ISC",
     "dependencies": {
         "dotenv": "^8.0.0",
-        "node-red": "^0.20.5",
-        "ts-nr-boilerplate": "bishoymelek/ts-lowerCase-node-red-sample#master"
+        "node-red": "^0.20.5"
     },
     "devDependencies": {
         "nodemon": "^1.19.0"
