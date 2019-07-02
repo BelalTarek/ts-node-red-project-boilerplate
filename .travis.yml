@@ -21,8 +21,8 @@ jobs:
         provider: heroku
         app: ts-node-red-project-bp
         api_key: 8cb875fc-caa5-4ee5-b0cd-6753c177a03a
-    - stage: test staging
-      script: 'curl https://ts-node-red-project-bp.herokuapp.com'
+    # - stage: test staging
+    #   script: 'curl https://ts-node-red-project-bp.herokuapp.com'
     # - stage: deploy to production
     #   script: test.sh
     #   deploy:
