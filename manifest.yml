@@ -1,0 +1,4 @@
+applications:
+- name: raseedy_sample_test
+  memory: 64MB
+  instances: 1

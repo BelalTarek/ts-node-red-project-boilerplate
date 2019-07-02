@@ -1,0 +1,25 @@
+{
+    "name": "sample_project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node node_modules/node-red/red.js --userDir . --settings ./config/settings.js",
+        "dev": "nodemon node_modules/node-red/red.js --userDir .  --settings ./config/dev_settings.js"
+    },
+    "author": "Bishoy Melek",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "node-red": "^0.20.5",
+        "ts-nr-boilerplate": "file:../../../Nodes/ts-node-boilerplate"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.0"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
