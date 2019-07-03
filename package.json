@@ -11,8 +11,10 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "node-red": "^0.20.5",
+    "node-red-contrib-function-npm": "^0.3.0",
     "node-red-contrib-mongodb": "~0.3.4",
-    "node-red-node-mongodb": "0.0.14"
+    "node-red-node-mongodb": "0.0.14",
+    "xlsx": "^0.14.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
